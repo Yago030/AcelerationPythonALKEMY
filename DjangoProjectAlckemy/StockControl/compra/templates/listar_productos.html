@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% load static %}
     <title>Listado de Productos</title>
 </head>
 <body>
-    <h1>Listado de Productos</h1>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Stock Actual</th>
-                <th>Proveedor</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for producto in productos %}
-            <tr>
-                <td>{{ producto.nombre }}</td>
-                <td>{{ producto.precio }}</td>
-                <td>{{ producto.stock_actual }}</td>
-                <td>{{ producto.proveedor.nombre }} {{ producto.proveedor.apellido }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    
-    
-    <a href="{% url 'agregar_producto' %}">Agregar Producto</a>
-    <a href="{% url 'agregar_proveedor' %}">Agregar Proveedor</a>
+    <div class="container">
+        <h1>Listado de Productos</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Stock Actual</th>
+                    <th>Proveedor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.nombre }}</td>
+                    <td> $ {{  producto.precio }}</td>
+                    <td>{{ producto.stock_actual }}</td>
+                    <td>{{ producto.proveedor.nombre }} {{ producto.proveedor.apellido }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

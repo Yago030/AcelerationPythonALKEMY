@@ -1,0 +1,32 @@
+
+ html, body{
+   width: 100%;
+    margin: 0px;
+    padding: 0px;
+ }
+body {
+   /*  background-image: url('../img/fondo.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    padding: 25px;
+    margin: 25px;
+    color: rgb(1, 0, 0) !important;
+    background-color: aliceblue;
+    font-weight: 700;
+}
+
+img {
+    height: 250px!important; /* Ajusta esta altura según tus preferencias */
+    width: auto !important;
+  
+}
+
+.text{
+    font-size: 300px !important;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a StockControl</title>
+    {% load static %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="../static/css/pagina_inicio.css">
+</head>
+<body class="bg-light d-flex flex-column justify-content-center align-items-center">
+
+    <h1 class="mb-5 mt-5 mx-10 h1">Bienvenido a StockControl</h1>
+
+    <div class="container mt-1 text">
+        <div class="row justify-content-center">
+            <div class="col-md-3 opcion  text-center">
+                <a class="btn btn-outline-secondary" href="{% url 'agregar_proveedor' %}">
+                    <img class="img-fluid img-thumbnail " src="{% static '../static/img/vendedor.jpg' %}" alt="Proveedores" class="img-fluid">
+                    Añadir Proveedor
+                </a>
+            </div>
+            <div class="col-md-3 opcion  text-center text-body-secondary">
+                <a class="btn btn-outline-secondary" href="{% url 'agregar_producto' %}">
+                    <img class="img-fluid img-thumbnail " src="{% static '../static/img/product.jpg' %}" alt="Productos">
+                    Añadir Producto
+                </a>
+            </div>
+            <div class="col-md-3 opcion  text-center">
+                <a class="btn btn-outline-secondary" href="{% url 'listar_productos' %}">
+                    <img  class="img-fluid img-thumbnail "src="{% static '../static/img/listProduct.jpg' %}" alt="Listado de Productos" class="img-fluid">
+                    Listar Productos
+                </a>
+            </div>
+            <div class="col-md-3 opcion  text-center  ">
+                <a class="btn btn-outline-secondary" href="{% url 'listar_proveedores' %}">
+                    <img class="img-fluid img-thumbnail " src="{% static '../static/img/listVendedor.jpg' %}" alt="Listado de Proveedores" class="img-fluid">
+                    Listar Proveedores
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

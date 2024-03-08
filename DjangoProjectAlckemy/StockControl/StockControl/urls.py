@@ -21,7 +21,8 @@ from compra import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('listar-productos/', views.listar_productos, name='listar_productos'),
+     path('listar-proveedores/', views.listar_proveedores, name='listar_proveedores'),
     path('agregar-producto/', views.agregar_productos, name='agregar_producto'),
     path('agregar-proveedor/', views.agregar_proveedor, name='agregar_proveedor'),
-    path('', views.inicio, name='inicio'),
+    path('', views.pagina_inicio, name='pagina_inicio'),
 ]
